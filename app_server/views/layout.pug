@@ -1,0 +1,34 @@
+doctype html
+head
+  meta(charset='UTF-8')
+  meta(name='viewport' content='width-device-width,initial-scale=1.0')
+  meta(http-equiv='X-UA-Compatible' content='ie=edge')
+  link(rel='stylesheet', href='stylesheets/bootstrap.min.css')
+  link(rel='stylesheet' href='stylesheets/main.css')
+  link(rel='stylesheet' href='stylesheets/page.css')
+  link(rel='stylesheet' href='stylesheets/style.css')
+  link(rel='stylesheet' href='stylesheets/table.css')
+  title College::Home
+  link(rel='icon' type='image/ico' href='images/favicon.ico')
+header.header
+  h1.logo
+    img.icon(src='images/favicon.ico')
+  ul.main-nav
+    li
+      a(href='/') Home
+    li
+     if(sessionval!="empty")
+       a(href='/logout') Log Out
+     else
+       a(href='/login') Login
+block content
+footer
+  p
+    strong &copy; Capstone Project
+  |         Web Design And Development-
+  script(type='text/javascript').
+    document.write(new Date().getFullYear());
+  script(type='text/javascript' src='/javascripts/jquery-3.4.1.min.js')
+  script(src='https://code.jquery.com/jquery-3.3.1.slim.min.js',integrity='sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo',crossorigin='anonymous')
+    script(src='https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js',integrity='sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49',crossorigin='anonymous')
+    script(src='/javascripts/bootstrap.min.js')

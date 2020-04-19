@@ -1,0 +1,273 @@
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed');
+
+html{
+    scroll-behavior: smooth;
+}
+
+body {
+	font-family: 'Roboto Condensed', sans-serif;
+	margin: 0;
+	background: #eee;
+	height: auto;
+}
+
+.icon{
+    height: 50px;
+    width: 50px;
+    margin: 5px;
+}
+
+a:hover {
+	background: #f4f4f4;
+	font-style: bolder;
+    
+}
+a{
+	font-family: Segoe, "Segoe UI", "DejaVu Sans", "Trebuchet MS", Verdana, "sans-serif";
+	color: black;
+	text-decoration: none;
+	font-weight: 400;
+}
+#header {
+	padding: 1.5rem;
+	text-align: center;
+	background: #333;
+	color: #fff;
+}
+#header h2 {
+	border-left: dotted 1px #fff;
+	border-right: dotted 1px #fff;
+	display: inline-block;
+	padding-right: 1rem;
+	padding-left: 1rem;
+}
+
+footer {
+	text-align: center;
+	padding: 2rem 1rem;
+	margin: auto;
+	color: #333;
+}
+footer h3 {
+	font-size: 3rem;
+	margin-bottom: 0;
+}
+
+.button {
+	padding: 0.5rem 2rem;
+	border: 1px #ccc solid;
+	display: inline-block;
+	margin: 2rem 0 0;
+	border-radius: 50px;
+	text-decoration: none;
+	color: #333;
+	transition: background 500ms ease;
+}
+.button:hover {
+	background: #f4f4f4;
+}
+/*-----Media Queries (768px)-----*/
+
+@media (min-width: 768px) {
+    
+    .header,.main-nav {
+		display: flex;
+	}
+    
+    .header {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .header{
+        width: 80%;
+        margin: 0 auto;
+    }
+    
+    .icon{
+        display: flex;
+    } 
+}
+
+/*-----Media Queries (1024px)-----*/
+
+@media (min-width: 1024px) {
+.button {
+	padding: 1rem 3rem;
+}
+    
+    .header {
+		flex-direction: row;
+		justify-content: space-between;
+	}
+}
+/*navigation*/
+ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+.logo {
+	margin: 0;
+	font-size: 1.45em;
+}
+
+.main-nav {
+	margin-top: 5px;
+
+}
+
+.logo a,.main-nav a {
+	padding: 10px 15px;
+	text-transform: uppercase;
+	text-align: center;
+	display: block;
+}
+
+.main-nav a {
+	color: #34495e;
+	font-size: .99em;
+}
+
+.main-nav a:hover {
+	color: #718daa;
+}
+
+.header {
+	padding-top: .5em;
+	padding-bottom: .5em;
+	border: 1px solid #a2a2a2;
+	background-color: #f4f4f4;
+	-webkit-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	box-shadow: 0px 0px 14px 0px rgba(0,0,0,0.75);
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+    margin-bottom: 10px;
+    width: 100%;
+}
+/*----------------------*/
+main {
+	max-width: 1000px;
+	margin: auto;
+	box-shadow: 30px 0px 40px rgba(0, 0, 0, 0.1),  -30px 0px 40px rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+}
+
+#heading{
+    text-align: center;
+    padding: 10px;
+    border: 2px solid grey;
+    border-radius: 15px;
+}
+
+#panel{
+    text-align: center;
+    background-color: whitesmoke;
+    border-radius: 15px;
+    height: 350px;
+}
+
+form{
+    padding-top: 30px;
+}
+
+.selector{
+    border-radius: 10px;
+}
+
+/* ----------------- */
+
+
+h1, h2, h3, h4, h5, h6, a {
+	margin:0; padding:0;
+	color: grey;
+  }
+  .login {
+	margin:0 auto;
+	max-width:500px;
+  }
+  .login-header {
+	color:grey;
+	text-align:center;
+	font-size:300%;
+  }
+  
+  .login-form {
+	border:.5px solid grey;
+	background:#4facff;
+	border-radius:10px;
+	box-shadow:0px 0px 10px #000;
+  }
+  .login-form h3 {
+	text-align:left;
+	margin-left:40px;
+	color: grey;
+  }
+  .login-form {
+	box-sizing:border-box;
+	padding-top:15px;
+	  padding-bottom:10%;
+	margin:5% auto;
+	text-align:center;
+  }
+  .login input[type="text"],
+  .login input[type="password"] {
+	max-width:400px;
+	  width: 80%;
+	line-height:3em;
+	font-family: 'Ubuntu', sans-serif;
+	margin:1em 2em;
+	border-radius:5px;
+	border:2px solid #f2f2f2;
+	outline:none;
+	padding-left:10px;
+  }
+  .login-form input[type="button"] {
+	height:50px;
+	width:100px;
+/*	background:grey;*/
+	border:1px solid #f2f2f2;
+	border-radius:20px;
+	color: slategrey;
+	text-transform:uppercase;
+	font-family: 'Ubuntu', sans-serif;
+	cursor:pointer;
+  }
+  .sign-up{
+	color: grey;
+	margin-left:-70%;
+	cursor:pointer;
+	text-decoration:underline;
+  }
+  .no-access {
+	color:#E86850;
+	margin:20px 0px 20px -57%;
+	text-decoration:underline;
+	cursor:pointer;
+  }
+  .try-again {
+	color: grey;
+	text-decoration:underline;
+	cursor:pointer;
+  }
+  
+  /*Media Querie*/
+  @media only screen and (min-width : 150px) and (max-width : 530px){
+	.login-form h3 {
+	  text-align:center;
+	  margin:0;
+	}
+	.sign-up, .no-access {
+	  margin:10px 0;
+	}
+	.login-button {
+	  margin-bottom:10px;
+	}
+  }

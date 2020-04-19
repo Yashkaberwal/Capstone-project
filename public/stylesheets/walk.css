@@ -1,0 +1,273 @@
+.container_man{
+	position:absolute;
+	top:5%;
+	left:5%;
+	width:20%;
+	height:50%;
+	opacity:0.5;
+	z-index:4000;
+	/*border:1px solid #000;*/
+	-webkit-animation:hill 9.5s ease-in-out infinite;
+	-moz-animation:hill 9.5s ease-in-out infinite;
+}
+@-webkit-keyframes hill{
+	0%{
+		margin-left:0%; 
+	}
+	50%{
+		margin-left:45%;
+	}
+	100%{
+		margin-left: 0%;	
+	}
+}
+@-moz-keyframes hill{
+	0%{
+		margin-left:0%; 
+	}
+	50%{
+		margin-left:45%;
+	}
+	100%{
+		margin-left: 0%;	
+	}
+}
+.head_box{
+	width:33%;
+	height:27%;
+	/*border-radius: 50%;*/
+	position:absolute;
+	top:9%;
+	left:29%;
+	z-index: 7;
+	/*border:1px solid #000;*/
+}
+.head{
+	width:100%;
+	height:100%;
+	background: url('../images/3.png') no-repeat;
+	background-size: 100% 100%;
+	border-radius: 50%;
+	position:relative;
+}
+.center{
+	width:90%;
+	height:100%;
+	margin:auto;
+	position:relative;
+}
+.body_box{
+	width:80%;
+	height:45%;
+	position:absolute;
+	top:33%;
+	left:13.8%;
+	z-index: 1;
+	/*border:1px solid #000;*/
+}
+.body{
+	width:80%;
+	height:100%;
+	position: relative;
+	background: url('../images/2.png') no-repeat;
+	background-size: 100% 100%;
+}
+.arm{
+	width:16%;
+	height:30%;
+	background:#282828;
+	position: absolute;
+	top:26%;
+	z-index: -1;
+	border-radius: 7px;
+	transform:rotate(40deg);
+}
+.left{
+	left:-5%;
+}
+.right{
+	width:15%;
+	left:64.4%;
+	transform:rotate(-38deg);
+	transform-origin:100% 0% ;
+}
+.aadi{
+	width:100%;
+	height:150%;
+	background: #282828;
+	position: absolute;
+	top:80%;
+	z-index:2;
+	border-radius:7px;
+}
+.lft{
+	left:2.6%;
+	transform-origin:10% 10%;
+	transform:rotate(340deg);
+} 
+.rgt{
+	top:85%;
+	left:7%;
+	height:86%;
+	transform-origin:100% 0%;
+	transform:rotate(-340deg);
+}
+.notice_board_box{
+	display:none;
+	width:110%;
+	height:60%;
+	position: absolute;
+	top:78%;
+	left:-14%;
+	z-index: 5;
+	background:#fbc;
+	border-radius: 20px;
+	box-shadow: 2px 2px 2px #f00; 
+	padding:1% 0;
+}
+.notice_board_center{
+	width:80%;
+	height:80%;
+	padding:2% 0;
+	margin:auto;
+}
+.notice_board{
+	width:95%;
+	height:80%;
+	margin:auto;
+	font-size:1.5vmn;
+	text-transform: capitalize;
+	color:#000;
+}
+.fotter_box{
+	width:80%;
+	height:50%;
+	/*border:1px solid #000;*/
+	position: absolute;
+	top:77%;
+	left:8%;
+}
+.leg{
+	width:12%;
+	height:40%;
+	border:1px solid #000;
+	position: absolute;
+	top:-10%;
+	border-radius: 0 0 7px 7px;
+	background:#282828;
+	transform-origin:10% 10%;
+}
+
+.hlf{
+	width:100%;
+	height:100%;
+	background:#282828;
+	position:relative;
+	top:65%;
+	left:5%;
+	border-radius:7px;
+	transform-origin:10% 10%;
+}
+.dil{
+	transform:rotate(5deg);
+	-webkit-animation:dilHillo 4.5s ease-in-out infinite;
+	-moz-animation:dilHillo 4.5s ease-in-out infinite;
+}
+@-webkit-keyframes dilHillo{
+	0%{
+		transform:rotate(-5deg);
+	}
+	50%{
+		transform:rotate(15deg);	
+	}
+	100%{
+		transform:rotate(-5deg);
+	}
+}
+@-moz-keyframes dilHillo{
+	0%{
+		transform:rotate(-5deg);
+	}
+	50%{
+		transform:rotate(15deg);	
+	}
+	100%{
+		transform:rotate(-5deg);
+	}
+}
+.lfts{
+	left:32%;
+	transform-origin:10% 10%;
+	transform:rotate(25deg);
+	-webkit-animation:legHillo 4s ease-in-out infinite;
+	-moz-animation:legHillo 4s ease-in-out infinite;
+}
+@-webkit-keyframes legHillo{
+	0%{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(25deg);
+	}
+	100%{
+		transform:rotate(0deg);
+	}
+}
+@-moz-keyframes legHillo{
+	0%{
+		transform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(25deg);
+	}
+	100%{
+		transform:rotate(0deg);
+	}
+}
+.rgts{
+	left:45%;
+	transform-origin:10% 10%;
+	transform:rotate(0deg);
+	-webkit-animation:rgtHillo 4s ease-in-out infinite;
+	-moz-animation:rgtHillo 4s ease-in-out infinite;
+}
+@-webkit-keyframes rgtHillo{
+	0%{
+		tranform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(-25deg);
+	}
+	100%{
+		transform:rotate(0deg);
+	}
+}
+@-moz-keyframes rgtHillo{
+	0%{
+		tranform:rotate(0deg);
+	}
+	50%{
+		transform:rotate(-25deg);
+	}
+	100%{
+		transform:rotate(0deg);
+	}
+}
+.foot{
+	width:450%;
+	height:80%;
+	position:absolute;
+	top:90%;
+	left:-20px;
+	/*border:1px solid #f00;*/
+	background: url('../images/4.png') no-repeat;
+	background-size: 100% 100%;
+}
+.lht{
+	/* left:-20px; */
+	transform:rotate(4deg);
+}
+.rht{
+	/* left:-20px; */
+	transform:rotate(-4deg);
+}

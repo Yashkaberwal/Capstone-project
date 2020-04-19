@@ -1,0 +1,57 @@
+extends layout
+
+block content
+  .header1.img_box
+      h1= title
+      ul.tabs
+        li.tab
+          input#tab1(type='radio', name='tabs', checked='checked')
+          label(for='tab1') Profile
+          #tab-content1.content
+            h1  Welcome  #{studentDetail.firstname}
+            hr
+            p Name: #{studentDetail.firstname}
+            br
+            p Full Name: #{studentDetail.firstname} #{studentDetail.lastname}
+            br
+            p Address: #{studentDetail.address}
+            br
+            p Contact: #{studentDetail.contact}
+            br
+        li.tab
+          input#tab2(type='radio', name='tabs')
+          label(for='tab2') Message Teacher
+          #tab-content2.content
+            div(data-role='fieldcontain')
+                fieldset(data-role='controlgroup')
+                   legend Send Message:
+                           form(method='post' action='/saveMessage')
+                                    input.form-control(type='text' name='username' readonly value=studentDetail.username)
+                                    input.form-control(type='text' placeholder='message' name='message')
+                                    button.button1(type='submit') Save
+                br 
+        li.tab
+          input#tab3(type='radio', name='tabs')
+          label(for='tab3') Attendance
+          #tab-content2.content
+            div(data-role='fieldcontain')
+                fieldset(data-role='controlgroup')
+                   legend Attendance :
+                         table#stad
+                           thead
+                             tr
+                               th Year
+                               th Month
+                               th Day
+                               th Attendance
+                           tbody
+                             each val in studentDetail.attendance
+                               tr
+                                td #{val.year}
+                                td #{val.month}
+                                td #{val.day}
+                                td #{val.record}
+                                  
+                  
+            br       
+                      

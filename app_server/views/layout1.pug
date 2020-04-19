@@ -1,0 +1,105 @@
+doctype html
+head
+  meta(name='viewport', content='width=device-width,initial-scale=1.0')
+  title  Nodues 
+  link(rel='stylesheet', href='/stylesheets/bootstrap.min.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/project.css')
+  link(rel='stylesheet' type='text/css' href='/stylesheets/walk.css')
+  script(type='text/javascript' src='/javascripts/jquery-3.4.1.min.js')
+  script(type='text/javascript').
+    $(document).ready(function(){
+    $(".lnk_menu").click(function(){
+    title = $(this).attr('title');
+    $(".hide").fadeIn(1000);
+    $(".pop").fadeIn(1000);
+    $(".dataa").load(title+'.php');
+    });
+    });
+    $(document).ready(function(){
+    $(".notice_board_box").delay(1000).slideDown(4000);
+    $(".closePop").click(function(){
+    $(".pop,.hide").slideUp(1000);
+    });
+    });
+.hide
+.pop
+  .closePop X
+  .dataa
+// WAlking man design Starts here
+.container_man
+  .center
+    .head_box
+      .head
+        //
+          <div class="eyes left">
+          <div class="eye "></div>
+          </div>
+          <div class="eyes right">
+          <div class="eye"></div>
+          </div>
+          <div class="nose"></div>
+          <div class="teeth"></div>
+    .body_box
+      .body
+      .arm.left
+        .aadi.lft
+      .arm.right
+        .aadi.rgt
+      .notice_board_box
+        .notice_board_center
+          .notice_board Copyright &copy; 2020 By Gurjit and Mandeep Kaur Saini
+    .fotter_box
+      .leg.lfts
+        .hlf.dil
+          .foot.lht
+      .leg.rgts
+        .hlf.hil
+          .foot.rht
+// WALKING man design Ednz here
+// DESIGNING Starts here
+.container
+  .center
+    // HEADER starts here
+    .header
+      .header_row
+        img.header_pic(src='/images/college.png')
+      .header_row
+        // <img src="img/online.png" class="header_pic">
+    // Header endz here
+    // LIST Starts here
+    .header
+      ul.list
+        a(href='#')
+          li(title='home') home
+        a(href='#')
+          li.lnk_menu(title='about') about
+        a#cont_tab(href='#')
+          li.lnk_menu(title='contact') contact us
+        a(href='#')
+          li.lnk_menu(title='subscr') subscribe
+        a(href='#')
+          li.lnk_menu(title='help') help
+        if (sessionval!="empty")
+          a(href='/logout') 
+            li.lnk_menu(title='logout') logout
+        else
+          a(href='/login/') 
+            li.lnk_menu(title='login') login
+    // LIST endz here
+    // LOGIN with IMAGE starts here
+    
+    block content
+    // LOGIN with IMAGE endz here
+    // Footer starts
+    footer
+      #foot
+        p.p1 Copyright &copy; College Name 2018
+        span Subscribe:
+        input(type='email' name='email' placeholder='Email Address')
+        input(type='Submit' name='Subscribe Now')
+      #sign
+        span Follow us:
+        a.fa.fa-facebook(href='#')
+        a.fa.fa-twitter(href='#')
+        a.fa.fa-instagram(href='#')
+    // Footer ends

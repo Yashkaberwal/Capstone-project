@@ -1,0 +1,143 @@
+extends layout
+
+block content
+ .header1.img_box   
+   h1= title
+   script(type='text/javascript').
+    //if (foo) bar(1 + 5)
+   script.
+    function getIndex() {
+    var value="";
+    console.log(document.getElementById("mySelect").selectedIndex);
+    if(document.getElementById("mySelect").selectedIndex==1)
+    {
+     document.getElementById("demo").href="/studentprogramlist/web design and development"; 
+    }
+    else if(document.getElementById("mySelect").selectedIndex==2)
+    {
+    document.getElementById("demo").href="/studentprogramlist/web security"; 
+
+    }
+    else
+    {
+        
+    }
+    console.log(value);
+   
+    }
+    
+    function test()
+    {
+    console.log(document.getElementById("datePicker").value);
+    console.log(document.getElementsByClassName("myText"));
+
+    document.getElementsByClassName("myText").value="hello";
+    
+    }
+   ul.tabs
+    li.tab
+      input#tab1(type='radio', name='tabs', checked='checked')
+      label(for='tab1') Profile
+      #tab-content1.content
+        h1  Welcome  #{teacherDetail.firstname}
+        hr
+        p Name: #{teacherDetail.firstname}
+        br
+        //img(src='https://blog.codepen.io/wp-content/uploads/2012/06/Button-Fill-Black-Large.png', width='100', style='float: left; margin-right: 10px;')
+        p Full Name: #{teacherDetail.firstname} #{teacherDetail.lastname}
+        br
+        p Address: #{teacherDetail.address}
+        br
+        p Contact: #{teacherDetail.contact}
+        br
+    li.tab
+      input#tab2(type='radio', name='tabs')
+      label(for='tab2') Class Attendance
+      #tab-content2.content
+        label(for='program') Select Program :
+           select#mySelect.button
+              option(value='0') Please select the program
+              option(value='1') Web Design and Development
+              option(value='2') Web Security
+        br
+        a#demo.button1(href='' onclick='getIndex()') Add
+        br
+        div(data-role='fieldcontain')
+            fieldset(data-role='controlgroup')
+               
+                if teacherStudentList === undefined
+                  label(for='radio-choice-1')
+                else
+                     legend Student List:
+                     table#stdlist
+                       thead
+                         tr
+                          th Year
+                          th Name
+                          th Attendance
+                       tbody
+                           each val in teacherStudentList
+                             tr                         
+                              form(method='post' action='/saveStudentAttendance/'+val._id)
+                                td
+                                  input#datePicker(type='date', name='date')
+                                td
+                                   input(type='text' name='name' value=val.firstname)
+                                td
+                                   input(type='text' name='attendance')
+                                td
+                                   button.button1(type='submit') Save
+            br 
+    li.tab
+      input#tab3(type='radio', name='tabs')
+      label(for='tab3') UnRead
+      #tab-content3.content
+        br
+        div(data-role='fieldcontain')
+            fieldset(data-role='controlgroup')
+               legend Student List :
+                     table#read
+                       thead
+                         tr
+                          th StuName
+                          th Message
+                          th Day
+                       tbody
+                         each val in teacherDetail.messages
+                          tr
+                           if val.read == "y"
+                           else
+                             form(method='post' action='/Done/'+teacherDetail._id+'/'+val._id)
+                               td #{val.studentName}
+                               td #{val.message}
+                               td #{val.day}
+                               td  
+                                 button.btn.btn-primary(type='submit') Done
+            br 
+    li.tab
+      input#tab4(type='radio', name='tabs')
+      label(for='tab4') Read
+      #tab-content3.content
+        br
+        div(data-role='fieldcontain')
+            fieldset(data-role='controlgroup')
+               legend Student List :
+                     table#unread
+                       thead
+                         tr
+                          th StuName
+                          th Message
+                          th Day
+                       tbody
+                         each val in teacherDetail.messages
+                           tr
+                            if val.read == "y"
+                              td #{val.studentName}
+                              td #{val.message}
+                              td #{val.day}
+                              
+                               
+            br         
+              
+               
+                  
